@@ -21,7 +21,8 @@ This script lets you view all hidden items at all times, even when online, until
 
 ## How to execute each script
 1) Download and install the latest version of Python 3 from https://www.python.org/downloads/.
-2) Download the scripts from this Github repository. You can download each file manually 
+2) Download the scripts from this Github repository. While git clone is the best method, you can also download them directly from the Raw file option:
+3) 
 
 ## When to execute each script
 ### ShowAllHiddenItems.py
