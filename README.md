@@ -21,9 +21,31 @@ This script lets you view all hidden items at all times, even when online, until
 
 ## How to execute each script
 1) Download and install the latest version of Python 3 from https://www.python.org/downloads/.
-2) Download the scripts from this Github repository. While git clone is the best method, you can also download them directly from the Raw file option:
+2) Download the scripts from this Github repository. While git clone is the best method, you can also download them directly from the Raw file option.
+
+a. Click on the filename, then click Raw:
 ![image](https://user-images.githubusercontent.com/45015771/167306325-bbf1d0b3-4a5e-4d66-b753-932deea68f40.png)
 
+b. Right-click the page that appears and click Save As to save the script.
+![image](https://user-images.githubusercontent.com/45015771/167306401-f8f734fb-96bc-4385-8db1-1420ee890d74.png)
+
+3) Go to the directory containing your Python scripts using File Explorer. Right-click the script you want to run and click Open With. If a text editor like Notepad or Notepad++ is listed, select it. Otherwise, click "Choose another app" and locate a text editor to open the file.
+![image](https://user-images.githubusercontent.com/45015771/167306501-edb3fcc2-1ac6-451e-b028-295419f5382f.png)
+
+4) Check the directory or directories listed at the top. Make sure that they are valid and point to the Steam installation of Halo Infinite on your PC. The directories shown here are for the Online script; the offline script only uses the "directory" variable.
+![image](https://user-images.githubusercontent.com/45015771/167306608-437bb8a9-b9ae-4200-906a-eac63c683094.png)
+
+5) Save any changes made to those directories and then close the file.
+6) Go back to File Explorer and, while in the directory containing your scripts, type "cmd" in the address bar without quotes. Press enter to launch the Command Prompt.
+![image](https://user-images.githubusercontent.com/45015771/167306745-fd38b821-2eab-4c03-a4bb-514aeba82029.png)
+
+7) *ShowAllHiddenItemsOnline.py only*: Type "python -m pip install requests" without quotes and press the Enter key. This will install the requests library for Python. This step need only be done once.
+![image](https://user-images.githubusercontent.com/45015771/167306942-ff5e9b28-424b-4a2d-871e-3886a33cd3ad.png)
+
+9) Type "python [script_name]" without quotes, where [script_name] is the name of the Python script you want to execute. For example, to run the Online script, you would type "python ShowAllHiddenItemsOnline.py". Press the Enter key to execute the script. It will likely take several seconds to finish executing, depending on how many files need to be modified.
+![image](https://user-images.githubusercontent.com/45015771/167307111-6201cfac-ba27-45b9-a3fd-662fda0bb799.png)
+
+10) After running the script, restart the game if it is running. If you did not run the Online script, you will need to disconnect the internet on your device before starting the game.
 
 ## When to execute each script
 ### ShowAllHiddenItems.py
@@ -35,3 +57,6 @@ After any game patch requiring a download.
 After starting the game in online mode and waiting for the Battle Pass and Challenges section to load. Requires the game to be restarted after running the script.
 - The game checks the API for updates and downloads/caches any it finds upon startup.
 - Running the script will update the existing cache, so the cache needs to be up-to-date before running the script.
+
+## More questions? Splendid! I would be happy to assist.
+If you have any questions or experience any difficulties while getting these scripts to work, feel free to reach out to me! I run the Infinite News website (haloinfinitenews.com) and am very active in its associated Discord channel: https://discord.gg/C2QcsjS6v5. You can also find me under the username Cizlin#5738 on Discord.
