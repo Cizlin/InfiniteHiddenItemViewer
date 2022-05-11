@@ -32,8 +32,23 @@ b. Right-click the page that appears and click Save As to save the script.
 3) Go to the directory containing your Python scripts using File Explorer. Right-click the script you want to run and click Open With. If a text editor like Notepad or Notepad++ is listed, select it. Otherwise, click "Choose another app" and locate a text editor to open the file.
 ![image](https://user-images.githubusercontent.com/45015771/167306501-edb3fcc2-1ac6-451e-b028-295419f5382f.png)
 
-4) Check the directory or directories listed at the top. Make sure that they are valid and point to the Steam installation of Halo Infinite on your PC. The directories shown here are for the Online script; the offline script only uses the "directory" variable.
-![image](https://user-images.githubusercontent.com/45015771/167306608-437bb8a9-b9ae-4200-906a-eac63c683094.png)
+4) Check the directories listed at the top. Make sure that they are valid and point to the Steam installation of Halo Infinite on your PC. The directories shown here are for the Online script; the offline script only uses the "directories" variable. Note that if you play Halo Infinite in a language other than en-US, you'll need to change the first directory to match the language-region code you use.
+![image](https://user-images.githubusercontent.com/45015771/167952296-7089cb27-afd1-46ff-8ce4-261da2b24bc7.png)
+
+Possible language-region codes are:
+- de-DE
+- en-US
+- es-ES
+- es-MX
+- fr-FR
+- it-IT
+- ja-JP
+- ko-KR
+- nl-NL
+- pl-PL
+- ru-RU
+- zh-CN
+- zh-TW
 
 5) Save any changes made to those directories and then close the file.
 6) Go back to File Explorer and, while in the directory containing your scripts, type "cmd" in the address bar without quotes. Press enter to launch the Command Prompt.
