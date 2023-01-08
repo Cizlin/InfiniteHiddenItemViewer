@@ -15,7 +15,7 @@ This script lets you view all hidden items while the game is offline, and many h
 - This script will not work if you want to view every cosmetic in the API while connected to the internet.
 
 ### ShowAllHiddenItemsOnline.py
-This script lets you view all hidden items at all times, even when online, until the next API update is downloaded.
+This script lets you view all hidden items (with cacheable ETags) at all times, even when online, until the next API update is downloaded.
 - Does everything that ShowAllHiddenItems.py does but also modifies customization item files in the working cache directory. These files are prioritized over the default cache files when the game is online.
 - Executing this script requires an internet connection and the installation of the Python requests library, but it will work when launching the game online.
 
