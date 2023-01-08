@@ -1,5 +1,5 @@
 # InfiniteHiddenItemViewer
-These Python scripts allow anyone to view customization items in Halo Infinite that are normally hidden.
+These Python scripts allow anyone to view customization items in Halo Infinite that are normally hidden. It will render the items locked but visible in most cases. To become visible with this trick, an item must have an ETag listed at this Waypoint API endpoint (requires special headers to access): https://gamecms-hacs-origin.svc.halowaypoint.com/hi/Progression/guide/xo
 
 ## Background
 To use these scripts, you must have the Steam version of Halo Infinite installed. This will not work with the Xbox version or the Microsoft Store version of the game.
@@ -35,7 +35,13 @@ b. Right-click the page that appears and click Save As to save the script.
 
 ![image](https://user-images.githubusercontent.com/45015771/167306501-edb3fcc2-1ac6-451e-b028-295419f5382f.png)
 
-4) Check the directories listed at the top. Make sure that they are valid and point to the Steam installation of Halo Infinite on your PC. The directories shown here are for the Online script; the offline script only uses the "directories" variable. Note that if you play Halo Infinite in a language other than en-US, you'll need to change the first directory to match the language-region code you use. Possible language-region codes are:
+4) Check the directories listed at the top of the Python script. Make sure that they are valid and point to the Steam installation of Halo Infinite on your PC. For example, if you install your Steam games on the D:\ drive instead of the C:\ drive, you might need to change the Python script to use directories like
+
+D:\Steam\steamapps\common\...
+
+The directories shown in the below image are for the Online script; the offline script only uses the "directories" variable. 
+
+Note that if you play Halo Infinite in a language other than en-US, you'll need to change the first directory to match the language-region code you use. Possible language-region codes are:
   - de-DE
   - en-US
   - es-ES
@@ -52,7 +58,7 @@ b. Right-click the page that appears and click Save As to save the script.
 
 ![image](https://user-images.githubusercontent.com/45015771/167952296-7089cb27-afd1-46ff-8ce4-261da2b24bc7.png)
 
-5) Save any changes made to those directories and then close the file.
+5) Save any changes made to the script(s) and then close the file(s).
 6) Go back to File Explorer and, while in the directory containing your scripts, type "cmd" in the address bar without quotes. Press enter to launch the Command Prompt.
 
 ![image](https://user-images.githubusercontent.com/45015771/167306745-fd38b821-2eab-4c03-a4bb-514aeba82029.png)
