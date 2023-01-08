@@ -20,7 +20,7 @@ This script lets you view all hidden items (with cacheable ETags) at all times, 
 - Executing this script requires an internet connection and the installation of the Python requests library, but it will work when launching the game online.
 
 ## How to execute each script
-1) Download and install the latest version of Python 3 from https://www.python.org/downloads/.
+1) Download and install the latest version of Python 3 from https://www.python.org/downloads/. During install, **make sure the "Add Python to PATH variable" checkbox is checked**. This will help prevent issues with later steps involving Python.
 2) Download the scripts from this Github repository. While git clone is the best method, you can also download them directly from the Raw file option.
 
 a. Click on the filename, then click Raw:
