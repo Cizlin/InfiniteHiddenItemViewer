@@ -1,6 +1,6 @@
 import os
 import re
-directories = ['C:\Program Files (x86)\Steam\steamapps\common\Halo Infinite\package\pc\en-US\gamecms', 'C:\Program Files (x86)\Steam\steamapps\common\Halo Infinite\package\pc\common\gamecms']
+directories = ['C:\\Program Files (x86)\\Steam\\steamapps\\common\\Halo Infinite\\package\\pc\\en-US\\gamecms', 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Halo Infinite\\package\\pc\\common\\gamecms']
 
 # Provided by codeape on stack overflow: https://stackoverflow.com/questions/1035340/reading-binary-file-and-looping-over-each-byte
 def bytes_from_file(filename, chunksize=8192):
