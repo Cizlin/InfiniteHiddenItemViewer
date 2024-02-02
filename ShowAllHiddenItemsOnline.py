@@ -1,8 +1,8 @@
 import os
 import re
 import requests
-directories = ['C:\Program Files (x86)\Steam\steamapps\common\Halo Infinite\package\pc\en-US\gamecms', 'C:\Program Files (x86)\Steam\steamapps\common\Halo Infinite\package\pc\common\gamecms']
-online_directory = 'C:\Program Files (x86)\Steam\steamapps\common\Halo Infinite\disk_cache\gamecmscache'
+directories = ['C:\\Program Files (x86)\\Steam\\steamapps\\common\\Halo Infinite\\package\\pc\\en-US\\gamecms', 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Halo Infinite\\package\\pc\\common\\gamecms']
+online_directory = 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Halo Infinite\\disk_cache\\gamecmscache'
 
 # Provided by codeape on stack overflow: https://stackoverflow.com/questions/1035340/reading-binary-file-and-looping-over-each-byte
 def bytes_from_file(filename, chunksize=8192):
@@ -72,7 +72,7 @@ try:
         uri_json = file_json['Uri']
         path = uri_json['Path']
 
-        if re.search('\d[^.]+', path):
+        if re.search(r'\d[^.]+', path):
             # Store the sanitized ETag in the list of valid ETags.
             valid_e_tag_array.append(file_json['ETag'].replace('/', '-').replace('"', ''))
 
