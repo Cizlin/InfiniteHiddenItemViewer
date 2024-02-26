@@ -85,4 +85,4 @@ After starting the game in online mode and waiting for the Battle Pass and Chall
 - Running the script will update the existing cache, so the cache needs to be up-to-date before running the script.
 
 ## More questions? Splendid! I would be happy to assist.
-If you have any questions or experience any difficulties while getting these scripts to work, feel free to reach out to me! I run the Infinite News website (haloinfinitenews.com) and am very active in its associated Discord channel: https://discord.gg/C2QcsjS6v5. You can also find me under the username Cizlin#5738 on Discord.
+If you have any questions or experience any difficulties while getting these scripts to work, feel free to reach out to me! I run the Infinite News website (haloinfinitenews.com) and am very active in its associated Discord channel: https://discord.gg/C2QcsjS6v5. You can also find me under the username Cizlin on Discord.
