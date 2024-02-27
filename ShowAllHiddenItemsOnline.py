@@ -18,18 +18,15 @@ def bytes_from_file(filename, chunksize=8192):
 def update_hidden_flag_in_file(filepath):
     file_bytes = list(bytes_from_file(filepath))
     quote_byte_found = False
-    
-    if file_bytes[0] == 0x89 and file_bytes[1] == 0x50 and file_bytes[2] == 0x4E and file_bytes[3] == 0x47:
-        #print('Skipping PNG: ' + filepath)
-        return
-
-        #print(bytes(file_bytes))
-        #print(filepath)
         
     num_patterns_found = 0
+    skip_to_index = -1
             
     for index, byte in enumerate(file_bytes):
-        if quote_byte_found and byte == 1 and file_bytes[index + 1] == 0x52: # The character immediately following the 0x01 should be an "R" (0x52).
+        if index < skip_to_index:
+            quote_byte_found = False
+            continue
+        elif quote_byte_found and byte == 1 and file_bytes[index + 1] == 0x52: # The character immediately following the 0x01 should be an "R" (0x52).
             # If we found the quote byte in our previous run and \x01 in this run.
             file_bytes[index] = 0
             num_patterns_found += 1
@@ -38,6 +35,18 @@ def update_hidden_flag_in_file(filepath):
         elif byte == 34: # If the byte we found is a double-quote.
             #print('found quote byte at ' + str(index))
             quote_byte_found = True
+            
+        elif byte == 0x89 and file_bytes[index + 1] == 0x50 and file_bytes[index + 2] == 0x4E and file_bytes[index + 3] == 0x47:
+            quote_byte_found = False
+            # We've found a PNG. Skip to the end so we don't accidentally corrupt it.
+            iteration_index = index
+            while iteration_index < len(file_bytes) - 8:
+                # If we reach the end of the PNG, we set our skip point to it.
+                if file_bytes[iteration_index] == 0x49 and file_bytes[iteration_index + 1] == 0x45 and file_bytes[iteration_index + 2] == 0x4E and file_bytes[iteration_index + 3] == 0x44 \
+                and file_bytes[iteration_index + 4] == 0xAE and file_bytes[iteration_index + 5] == 0x42 and file_bytes[iteration_index + 6] == 0x60 and file_bytes[iteration_index + 7] == 0x82:
+                    skip_to_index = iteration_index + 8
+                    break
+                iteration_index += 1
 
         else: # If we didn't find the correct byte sequence, reset our flag.
             quote_byte_found = False 
